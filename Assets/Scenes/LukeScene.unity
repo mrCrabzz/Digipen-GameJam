@@ -215,7 +215,6 @@ GameObject:
   m_Component:
   - component: {fileID: 346328679}
   - component: {fileID: 346328678}
-  - component: {fileID: 346328677}
   - component: {fileID: 346328676}
   m_Layer: 0
   m_Name: Player
@@ -245,32 +244,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &346328677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 346328675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f116f00cf4bfb749a051cd99801733e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 1000
-  RotationSpeed: 10
-  myRb: {fileID: 0}
-  Laser: {fileID: 0}
-  Cooldown: 0.2
-  Timer: 0
-  LaserSpeed: 15
-  Offset1: {x: 0.4, y: 0.8, z: 0}
-  Offset2: {x: -0.4, y: 0.8, z: 0}
-  FC: {fileID: 0}
-  FireShakeTime: 0.1
-  FireShakeMag: 0.2
-  myAudio: {fileID: 0}
-  LaserSound: {fileID: 0}
 --- !u!212 &346328678
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -347,6 +320,7 @@ GameObject:
   - component: {fileID: 1408221059}
   - component: {fileID: 1408221058}
   - component: {fileID: 1408221057}
+  - component: {fileID: 1408221060}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -419,3 +393,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1408221060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408221056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c67ae0cfa3f64498b624ca804b3c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 346328675}
+  LerpTVal: 0.5
+  ShakeTime: 0
+  ShakeMagnitude: 0
