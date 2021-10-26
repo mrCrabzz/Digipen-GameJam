@@ -1466,6 +1466,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ba3b9486589fa439aae398b51a5141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Laser: {fileID: 6649181453436095030, guid: 23b2d7306a57761438ea64505e6d7586, type: 3}
+  Cooldown: 0.2
+  LaserSpeed: 15
+  Offset1: {x: 0.4, y: 0.8, z: 0}
+  LaserSound: {fileID: 0}
   speed: 5
 --- !u!50 &651439546
 Rigidbody2D:
@@ -1527,7 +1532,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

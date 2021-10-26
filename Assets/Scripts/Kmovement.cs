@@ -37,19 +37,30 @@ public class Kmovement : MonoBehaviour
         float movey = 0f;
         if (Input.GetKey("a"))
         {
-            movex -= speed;
+            if (this.transform.position.x > -20f)
+            {
+                movex -= speed;
+            }
         }
         if (Input.GetKey("d"))
         {
-            movex += speed;
+            if (this.transform.position.x < 48f)
+            {
+                movex += speed;
+            }
         }
         if (Input.GetKey("s"))
         {
-            movey -= speed;
+            if (this.transform.position.y > -30f) {     
+                movey -= speed; 
+            }
         }
         if (Input.GetKey("w"))
         {
-            movey += speed;
+            if (this.transform.position.y < 45f)
+            {
+                movey += speed;
+            }
         }
         GetComponent<Rigidbody2D>().velocity = new Vector2(movex, movey);
         Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
