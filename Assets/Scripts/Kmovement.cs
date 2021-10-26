@@ -4,6 +4,25 @@ using UnityEngine;
 
 public class Kmovement : MonoBehaviour
 {
+    [Tooltip("Drag the laser prefab here to use")]
+    public GameObject Laser;
+
+    public float Cooldown = 0.2f;
+    float Timer = 0;
+    public float LaserSpeed = 15;
+    public Vector3 Offset1 = new Vector3(.4f, .8f, 0);
+    
+
+
+    //FollowingCamera FC;
+   // public float FireShakeTime = 0.1f;
+   // public float FireShakeMag = 0.2f;
+
+    //audio things
+    AudioSource myAudio;
+    public AudioClip LaserSound;
+
+
     public float speed = 10f;
     // Start is called before the first frame update
     void Start()
@@ -14,30 +33,30 @@ public class Kmovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*float movex = 0f;
+        float movex = 0f;
         float movey = 0f;
-        if (Input.GetKey("left"))
+        if (Input.GetKey("a"))
         {
             movex -= speed;
         }
-        if (Input.GetKey("right"))
+        if (Input.GetKey("d"))
         {
             movex += speed;
         }
-        if (Input.GetKey("down"))
+        if (Input.GetKey("s"))
         {
             movey -= speed;
         }
-        if (Input.GetKey("up"))
+        if (Input.GetKey("w"))
         {
             movey += speed;
-        }*/
-        //GetComponent<Rigidbody2D>().velocity = new Vector2(movex, movey);
+        }
+        GetComponent<Rigidbody2D>().velocity = new Vector2(movex, movey);
         Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         //GetComponent<Rigidbody2D>().velocity = new Vector2(movex, movey);
-        if (Input.GetKey("left"))
+        /*if (Input.GetKey("left"))
         {
             transform.position += transform.up * Time.deltaTime * -speed;
         }
@@ -52,7 +71,26 @@ public class Kmovement : MonoBehaviour
         if (Input.GetKey("up"))
         {
             transform.position += transform.right * Time.deltaTime * speed;
-        }
+        }*/
 
+        Timer += Time.deltaTime;
+        if (Input.GetAxisRaw("Jump") == 1 && Timer >= Cooldown)
+        {
+            //make laser noise
+            //myAudio.PlayOneShot(LaserSound);
+            //fire objects
+            Fire(Offset1);
+            
+            Timer = 0;
+        }
+    }
+    void Fire(Vector3 offset)
+    {
+        Vector3 spawnpos = transform.position + transform.rotation * offset;
+        GameObject las1 = Instantiate(Laser, spawnpos, transform.rotation);
+
+        las1.GetComponent<Rigidbody2D>().velocity = transform.right * LaserSpeed;
+
+        //FC.TriggerShake(FireShakeTime, FireShakeMag);
     }
 }
