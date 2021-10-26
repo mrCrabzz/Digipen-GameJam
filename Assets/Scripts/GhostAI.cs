@@ -19,6 +19,7 @@ public class GhostAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Target = GameObject.Find("Player");
         myRb = GetComponent<Rigidbody2D>();
     }
 

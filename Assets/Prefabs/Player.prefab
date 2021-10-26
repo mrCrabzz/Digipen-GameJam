@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4033358595178442658}
   - component: {fileID: 4033358595178442659}
   - component: {fileID: 4033358595178442657}
+  - component: {fileID: -1934344455007657893}
+  - component: {fileID: 5750575589807318165}
+  - component: {fileID: -9105123141317897288}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -104,3 +107,52 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1934344455007657893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4033358595178442662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ba3b9486589fa439aae398b51a5141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Laser: {fileID: 6649181453436095030, guid: 23b2d7306a57761438ea64505e6d7586, type: 3}
+  Cooldown: 0.2
+  LaserSpeed: 15
+  Offset1: {x: 0.4, y: 0.8, z: 0}
+  LaserSound: {fileID: 0}
+  speed: 10
+--- !u!114 &5750575589807318165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4033358595178442662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cac737fac1d00e469ba28c66972b095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentHealth: 5
+  MaxHealth: 5
+  DestroyAtZero: 1
+  DeathTime: 0.2
+--- !u!114 &-9105123141317897288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4033358595178442662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5884abe83bf61594da13f8feb6938e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []

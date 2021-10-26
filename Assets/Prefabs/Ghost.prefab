@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3801054392312485327}
   - component: {fileID: 1792372107475496884}
   - component: {fileID: 5181173265141533628}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,13 +31,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4667305057671926264}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -48.40015, y: 7.1423903, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2344836707217603063
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Amount: 4
-  DestroyOnCollide: 1
+  DestroyOnCollide: 0
 --- !u!114 &5561274127953337717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
   PaceSpeed: 2
   ChaseDistance: 4
   ChaseSpeed: 5
-  Target: {fileID: 0}
+  Target: {fileID: 4033358595178442662, guid: 40201cbd4b87b6d48b8977fc3093d754, type: 3}
 --- !u!114 &1792372107475496884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,7 +284,7 @@ MonoBehaviour:
   CurrentHealth: 1
   MaxHealth: 1
   DestroyAtZero: 1
-  DeathTime: 0.2
+  DeathTime: 0
 --- !u!114 &5181173265141533628
 MonoBehaviour:
   m_ObjectHideFlags: 0
