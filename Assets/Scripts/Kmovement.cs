@@ -37,27 +37,27 @@ public class Kmovement : MonoBehaviour
         float movey = 0f;
         if (Input.GetKey("a"))
         {
-            if (this.transform.position.x > -20f)
+            if (this.transform.position.x > -33f)
             {
                 movex -= speed;
             }
         }
         if (Input.GetKey("d"))
         {
-            if (this.transform.position.x < 48f)
+            if (this.transform.position.x < 33f)
             {
                 movex += speed;
             }
         }
         if (Input.GetKey("s"))
         {
-            if (this.transform.position.y > -30f) {     
+            if (this.transform.position.y > -36f) {     
                 movey -= speed; 
             }
         }
         if (Input.GetKey("w"))
         {
-            if (this.transform.position.y < 45f)
+            if (this.transform.position.y < 36f)
             {
                 movey += speed;
             }
