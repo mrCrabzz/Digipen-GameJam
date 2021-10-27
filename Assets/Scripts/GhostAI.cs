@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GhostAI : MonoBehaviour
 {
+
     
 
     public float PaceSpeed = 20;
@@ -23,11 +24,17 @@ public class GhostAI : MonoBehaviour
         myRb = GetComponent<Rigidbody2D>();
     }
 
+    void Update()
+    {
+        
+
+        //transform.rotation = Quaternion.LookRotation(dir, Vector3.up);
+    }
 
 
 
-    // FixedUpdate is called once per physics frame
-    void FixedUpdate()
+        // FixedUpdate is called once per physics frame
+        void FixedUpdate()
     {
         //make sure target exists
         if (Target != null)
@@ -43,7 +50,9 @@ public class GhostAI : MonoBehaviour
             {
                 Chase(direction, PaceSpeed);
             }
-            Vector3 dir = Target.transform.position - Camera.main.WorldToScreenPoint(transform.position);
+            Vector3 dir = Target.transform.position - transform.position;
+            //- Camera.main.WorldToScreenPoint(transform.position);
+            dir = dir.normalized;
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
