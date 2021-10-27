@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    float Cooldown = 0.5f;
-    float Timer = 0;
+    float Cooldown = 1f;
+    float Timer = 10;
 
     public int Amount = 4;
     public bool DestroyOnCollide = true;
@@ -18,6 +18,7 @@ public class Damage : MonoBehaviour
         if(H != null && Timer >= Cooldown)
         {
             H.HealthChange(-Amount);
+            Timer = 0;
         }
         if(DestroyOnCollide)
         {
@@ -37,6 +38,7 @@ public class Damage : MonoBehaviour
         if (H != null && Timer >= Cooldown)
         {
             H.HealthChange(-Amount);
+            Timer = 0;
         }
     }
 
@@ -47,6 +49,7 @@ public class Damage : MonoBehaviour
         if (H != null && Timer >= Cooldown)
         {
             H.HealthChange(-Amount);
+            Timer = 0;
         }
         if (DestroyOnCollide)
         {
@@ -66,6 +69,7 @@ public class Damage : MonoBehaviour
         if (H != null && Timer >= Cooldown)
         {
             H.HealthChange(-Amount);
+            Timer = 0;
         }
     }
     // Start is called before the first frame update
