@@ -18,7 +18,13 @@ public class EnemySpawner : MonoBehaviour
             counter = 0;
             int degree = Random.Range(0, 360);
             Instantiate(enemyPrefab, new Vector3(Mathf.Cos(degree)*60f, Mathf.Sin(degree) * 60f, transform.position.z), transform.rotation);
-
+            if (interval > 20)
+            {
+                interval -= interval / 50;
+            }
+            else {
+                interval -= interval / 1000;
+            }
         }
     }
 
