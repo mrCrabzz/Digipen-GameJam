@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
+    float Cooldown = 0.5f;
+    float Timer = 0;
 
     public int Amount = 4;
     public bool DestroyOnCollide = true;
@@ -11,8 +13,9 @@ public class Damage : MonoBehaviour
     //happens once when collision of two objects starts
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Timer += Time.deltaTime;
         Health H= collision.gameObject.GetComponent<Health>();
-        if(H != null)
+        if(H != null && Timer >= Cooldown)
         {
             H.HealthChange(-Amount);
         }
@@ -29,8 +32,9 @@ public class Damage : MonoBehaviour
     //happen every frame that two objects collide
     private void OnCollisionStay2D(Collision2D collision)
     {
+        Timer += Time.deltaTime;
         Health H = collision.gameObject.GetComponent<Health>();
-        if (H != null)
+        if (H != null && Timer >= Cooldown)
         {
             H.HealthChange(-Amount);
         }
@@ -38,8 +42,9 @@ public class Damage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Timer += Time.deltaTime;
         Health H = collision.GetComponent<Health>();
-        if (H != null)
+        if (H != null && Timer >= Cooldown)
         {
             H.HealthChange(-Amount);
         }
@@ -56,8 +61,9 @@ public class Damage : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        Timer += Time.deltaTime;
         Health H = collision.GetComponent<Health>();
-        if (H != null)
+        if (H != null && Timer >= Cooldown)
         {
             H.HealthChange(-Amount);
         }
