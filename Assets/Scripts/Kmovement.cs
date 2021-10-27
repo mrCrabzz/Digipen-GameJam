@@ -10,7 +10,7 @@ public class Kmovement : MonoBehaviour
     public float Cooldown = 0.2f;
     float Timer = 0;
     public float LaserSpeed = 15;
-    public Vector3 Offset1 = new Vector3(.4f, .8f, 0);
+    public Vector3 Offset1 = new Vector3(-.4f, .8f, 0);
     
 
 

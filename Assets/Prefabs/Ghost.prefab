@@ -265,10 +265,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39193598eb10cd4b971dd6b5240aea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PaceSpeed: 5
-  ChaseDistance: 5
-  ChaseSpeed: 8
-  Target: {fileID: 4033358595178442662, guid: 40201cbd4b87b6d48b8977fc3093d754, type: 3}
+  PaceSpeed: 15
+  ChaseDistance: 15
+  ChaseSpeed: 3
+  Target: {fileID: 3549970716244545967, guid: d5195dfa75735c74e9901594848d0a8c, type: 3}
 --- !u!114 &1792372107475496884
 MonoBehaviour:
   m_ObjectHideFlags: 0
