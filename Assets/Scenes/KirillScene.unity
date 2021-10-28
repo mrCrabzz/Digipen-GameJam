@@ -3309,6 +3309,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3549970716244545964, guid: d5195dfa75735c74e9901594848d0a8c, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3549970716244545967, guid: d5195dfa75735c74e9901594848d0a8c, type: 3}
       propertyPath: m_Name
       value: guy1
