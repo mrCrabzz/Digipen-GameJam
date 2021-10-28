@@ -67,6 +67,9 @@ public class Kmovement : MonoBehaviour
         Vector3 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        
+        //transform.eulerAngles = new Vector3(0, 0, angle);
+        print(dir);
         //GetComponent<Rigidbody2D>().velocity = new Vector2(movex, movey);
         /*if (Input.GetKey("left"))
         {
