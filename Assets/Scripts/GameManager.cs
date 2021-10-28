@@ -54,7 +54,6 @@ public class GameManager : MonoBehaviour
             {
                 HighScore = Score;
             }
-            Score = 0;
             StartCoroutine(DelayStart());
             amIdead = true;
         }
