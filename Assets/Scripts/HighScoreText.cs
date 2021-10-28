@@ -1,24 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using TMPro;
 
-public class SceneStuff : MonoBehaviour
+public class HighScoreText : MonoBehaviour
 {
+    TMP_Text HighScore;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        HighScore = GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void StartTheGame()
-    {
-        SceneManager.LoadScene("KirillScene");
+        //sets the text to the score
+        HighScore.text = "High Score: " + GameManager.HighScore;
     }
 }

@@ -63,7 +63,8 @@ public class Kmovement : MonoBehaviour
             }
         }
         GetComponent<Rigidbody2D>().velocity = new Vector2(movex, movey);
-        Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        
+        Vector3 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         //GetComponent<Rigidbody2D>().velocity = new Vector2(movex, movey);

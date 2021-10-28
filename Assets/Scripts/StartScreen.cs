@@ -7,6 +7,7 @@ public class StartScreen : MonoBehaviour
 {
     public void StartTheGame()
     {
+        GameManager.Score = 0;
         SceneManager.LoadScene("KirillScene");
     }
 
