@@ -148,5 +148,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cf61aea6e47ec54fa6bd25e8b4ab245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Amount: 4
+  Amount: 1
   DestroyOnCollide: 1
