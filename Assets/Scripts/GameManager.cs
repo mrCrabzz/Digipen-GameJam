@@ -57,12 +57,16 @@ public class GameManager : MonoBehaviour
             StartCoroutine(DelayStart());
             amIdead = true;
         }
+        player = GameObject.Find("guy1");
+        if (player != null)
+        {
+            amIdead = false;
+        }
     }
 
     IEnumerator DelayStart()
     {
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("endscreen");
-        //amIdead = false;
     }
 }
