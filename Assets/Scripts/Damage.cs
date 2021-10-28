@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    float Cooldown = 0.5f;
+    float Cooldown = 1f;
     float Timer = 10;
 
     public int Amount = 4;
