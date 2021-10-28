@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
 
     public static int Score = 0;
+    public static int HighScore = 0;
     private bool amIdead;
     //public static int Health = 5;
     private static GameManager _instance;
@@ -49,6 +50,11 @@ public class GameManager : MonoBehaviour
     {
         if (player == null && amIdead == false)
         {
+            if(Score > HighScore)
+            {
+                HighScore = Score;
+            }
+            Score = 0;
             StartCoroutine(DelayStart());
             amIdead = true;
         }
