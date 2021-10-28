@@ -58,5 +58,6 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("endscreen");
+        //amIdead = false;
     }
 }
