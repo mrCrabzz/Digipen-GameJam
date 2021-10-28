@@ -17,6 +17,9 @@ public class Health : MonoBehaviour
     public void HealthChange (int change)
     {
         CurrentHealth += change;
+
+        //string objectName = GameObject.FindWithTag
+        
         if(CurrentHealth <= 0)
         {
             //optional but this will prevent negative health
