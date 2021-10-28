@@ -124,7 +124,7 @@ MonoBehaviour:
   LaserSpeed: 15
   Offset1: {x: 1.1, y: -0.15, z: 0}
   LaserSound: {fileID: 0}
-  speed: 10
+  speed: 6
 --- !u!114 &3549970716244545965
 MonoBehaviour:
   m_ObjectHideFlags: 0
