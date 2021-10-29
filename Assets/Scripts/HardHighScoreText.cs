@@ -17,6 +17,6 @@ public class HardHighScoreText : MonoBehaviour
     void Update()
     {
         //sets the text to the score
-        HardHighScore.text = "High Score: " + GameManager.HardHighScore;
+        HardHighScore.text = "Hard High Score: " + GameManager.HardHighScore;
     }
 }
