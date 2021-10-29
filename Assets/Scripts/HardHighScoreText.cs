@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class HighScoreText : MonoBehaviour
+public class HardHighScoreText : MonoBehaviour
 {
-    TMP_Text HighScore;
+    TMP_Text HardHighScore;
 
     // Start is called before the first frame update
     void Start()
     {
-        HighScore = GetComponent<TMP_Text>();
+        HardHighScore = GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //sets the text to the score
-        HighScore.text = "High Score: " + GameManager.HighScore;
+        HardHighScore.text = "Hard High Score: " + GameManager.HardHighScore;
     }
 }
