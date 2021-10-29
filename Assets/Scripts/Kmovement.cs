@@ -88,7 +88,7 @@ public class Kmovement : MonoBehaviour
         }*/
 
         Timer += Time.deltaTime;
-        if (Input.GetAxisRaw("Jump") == 1 && Timer >= Cooldown)
+        if ((Input.GetAxisRaw("Jump") == 1 || Input.GetAxisRaw("Fire1") == 1) && Timer >= Cooldown)
         {
             //make laser noise
             //myAudio.PlayOneShot(LaserSound);
