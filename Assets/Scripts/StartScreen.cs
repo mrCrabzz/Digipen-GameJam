@@ -19,6 +19,28 @@ public class StartScreen : MonoBehaviour
         SceneManager.LoadScene("HardMode");
     }
 
+    public void StartPreviousScene()
+    {
+        if (GameManager.isNormalMode == true)
+        {
+            SceneManager.LoadScene("KirillScene");
+            GameManager.Score = 0;
+            GameManager.HardScore = 0;
+        }
+        else if (GameManager.isHardMode == true)
+        {
+            SceneManager.LoadScene("HardMode");
+            GameManager.Score = 0;
+            GameManager.HardScore = 0;
+        }
+        else
+        {
+            SceneManager.LoadScene("KirillScene");
+            GameManager.Score = 0;
+            GameManager.HardScore = 0;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
