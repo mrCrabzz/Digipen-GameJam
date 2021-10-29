@@ -33,18 +33,21 @@ public class Kmovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //future ideas: make corn not pass through buildings, make ghosts be hidden behind buildings
+
+
         float movex = 0f;
         float movey = 0f;
         if (Input.GetKey("a"))
         {
-            if (this.transform.position.x > -33f)
+            if (this.transform.position.x > -35f)
             {
                 movex -= speed;
             }
         }
         if (Input.GetKey("d"))
         {
-            if (this.transform.position.x < 33f)
+            if (this.transform.position.x < 37f)
             {
                 movex += speed;
             }
@@ -57,7 +60,7 @@ public class Kmovement : MonoBehaviour
         }
         if (Input.GetKey("w"))
         {
-            if (this.transform.position.y < 36f)
+            if (this.transform.position.y < 37f)
             {
                 movey += speed;
             }
