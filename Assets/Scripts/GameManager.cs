@@ -4,9 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
+    public static bool isHardMode = false;
+    public static bool isNormalMode = false;
 
     public static int Score = 0;
     public static int HighScore = 0;
+
+    public static int HardScore = 0;
+    public static int HardHighScore = 0;
     private bool amIdead;
     //public static int Health = 5;
     private static GameManager _instance;
@@ -53,6 +58,10 @@ public class GameManager : MonoBehaviour
             if(Score > HighScore)
             {
                 HighScore = Score;
+            }
+            if (HardScore > HardHighScore)
+            {
+                HardHighScore = HardScore;
             }
             StartCoroutine(DelayStart());
             amIdead = true;

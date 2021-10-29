@@ -11,12 +11,12 @@ public class Kmovement : MonoBehaviour
     float Timer = 0;
     public float LaserSpeed = 15;
     public Vector3 Offset1 = new Vector3(-.4f, .8f, 0);
-    
+    private AudioSource source;
 
 
     //FollowingCamera FC;
-   // public float FireShakeTime = 0.1f;
-   // public float FireShakeMag = 0.2f;
+    // public float FireShakeTime = 0.1f;
+    // public float FireShakeMag = 0.2f;
 
     //audio things
     AudioSource myAudio;
@@ -27,7 +27,7 @@ public class Kmovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -97,6 +97,7 @@ public class Kmovement : MonoBehaviour
             Fire(Offset1);
             
             Timer = 0;
+            source.Play();
         }
     }
     void Fire(Vector3 offset)
