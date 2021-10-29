@@ -17,6 +17,16 @@ public class ScoreText : MonoBehaviour
     void Update()
     {
         //sets the text to the score
-        Score.text = "Score: " + GameManager.Score;
+        //checks which score is higher
+        //score is set to zero when scene is reloaded
+        //so the correct score will always be higher
+        if (GameManager.isNormalMode == true)
+        {
+            Score.text = "Score: " + GameManager.Score;
+        }
+        else if(GameManager.isHardMode == true)
+        {
+            Score.text = "Score: " + GameManager.Score;
+        }
     }
 }

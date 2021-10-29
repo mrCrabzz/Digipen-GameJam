@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: a58ce072457dadf48be7d7fa8ff7fab2
+  - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: 94df0e9562f485f45ab5bafd3d6ff1d5
   - enabled: 1
@@ -18,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/KirillScene.unity
     guid: d190bb0201ebb1742bbf3d166026fef5
   - enabled: 0
-    path: Assets/Scenes/Hard Mode.unity
+    path: Assets/Scenes/HardMode.unity
     guid: d1e1db1dfbe706a4b994d122b5451e30
   - enabled: 1
     path: Assets/Scenes/endscreen.unity
