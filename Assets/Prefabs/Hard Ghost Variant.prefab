@@ -34,11 +34,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1792372107475496884, guid: 65109abd92af2af48b01b14af5845bd7, type: 3}
       propertyPath: MaxHealth
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1792372107475496884, guid: 65109abd92af2af48b01b14af5845bd7, type: 3}
       propertyPath: CurrentHealth
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2344836707217603063, guid: 65109abd92af2af48b01b14af5845bd7, type: 3}
       propertyPath: m_Color.b
@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3801054392312485327, guid: 65109abd92af2af48b01b14af5845bd7, type: 3}
       propertyPath: ChaseSpeed
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4667305057671926264, guid: 65109abd92af2af48b01b14af5845bd7, type: 3}
       propertyPath: m_Name
