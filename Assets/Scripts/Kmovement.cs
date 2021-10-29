@@ -33,6 +33,9 @@ public class Kmovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //future ideas: make corn not pass through buildings, make ghosts be hidden behind buildings
+
+
         float movex = 0f;
         float movey = 0f;
         if (Input.GetKey("a"))
