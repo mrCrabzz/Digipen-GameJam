@@ -255,6 +255,7 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  DeathNoise: {fileID: 0}
 --- !u!114 &3801054392312485327
 MonoBehaviour:
   m_ObjectHideFlags: 0
