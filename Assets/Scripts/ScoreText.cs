@@ -26,7 +26,7 @@ public class ScoreText : MonoBehaviour
         }
         else if(GameManager.isHardMode == true)
         {
-            Score.text = "Score: " + GameManager.Score;
+            Score.text = "Score: " + GameManager.HardScore;
         }
     }
 }

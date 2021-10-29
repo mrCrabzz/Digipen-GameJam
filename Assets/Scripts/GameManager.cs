@@ -65,12 +65,15 @@ public class GameManager : MonoBehaviour
             }
             StartCoroutine(DelayStart());
             amIdead = true;
+            print("dead");
         }
         player = GameObject.Find("guy1");
         if (player != null)
         {
             amIdead = false;
         }
+
+
     }
 
     IEnumerator DelayStart()
