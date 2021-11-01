@@ -55,14 +55,6 @@ public class GameManager : MonoBehaviour
     {
         if (player == null && amIdead == false)
         {
-            if(Score > HighScore)
-            {
-                HighScore = Score;
-            }
-            if (HardScore > HardHighScore)
-            {
-                HardHighScore = HardScore;
-            }
             StartCoroutine(DelayStart());
             amIdead = true;
             print("dead");
@@ -79,6 +71,14 @@ public class GameManager : MonoBehaviour
     IEnumerator DelayStart()
     {
         yield return new WaitForSeconds(3);
+        if (Score > HighScore)
+        {
+            HighScore = Score;
+        }
+        if (HardScore > HardHighScore)
+        {
+            HardHighScore = HardScore;
+        }
         SceneManager.LoadScene("endscreen");
     }
 }
